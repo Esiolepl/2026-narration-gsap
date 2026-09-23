@@ -35,7 +35,16 @@
 
 .block{
     background-color: rgb(233, 252, 252);
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+#moving-block1{
+    z-index: 0001; /* Mettre à l'arrière plan */
+}
+
+#text-block{
+    background-color: rgb(250, 235, 215);
+    width: 80vw;
 }
 

@@ -8,15 +8,11 @@ gsap.registerPlugin(ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPl
 
 /* Fonctions **********************************/
 
-/* Animation 1er block ------------------*/
+/* Animation 1er block (ScrollTrigger) --------------*/
 
-
-
-/* Animation 2e block (ScrollTrigger) --------------*/
-
-gsap.to("#moving-block2", { // Va à ..., contrairement à "from" qui part de ...
+gsap.to("#moving-block1", { // Va à ..., contrairement à "from" qui part de ...
     scrollTrigger : {
-        trigger : "#section2",
+        trigger : "#section1",
         start : 'top 50%',
         markers : false, //"true" pour montrer les marqueurs de ref d'animation (start & end), "false" pour les cacher
         scrub : 1, // selon la valeur, joue les animations de meme classe de manière saccadée
@@ -24,7 +20,7 @@ gsap.to("#moving-block2", { // Va à ..., contrairement à "from" qui part de ..
     },
 
     y : '50vh',
-    rotation : 360,
+    rotation : 720,
     duration : 2,
 })
 
