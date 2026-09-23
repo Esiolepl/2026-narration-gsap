@@ -1,0 +1,41 @@
+/* Bases ******************************** */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Variables ******************************** */
+
+
+
+/* Typography ******************************** */
+
+
+
+/* Page design ******************************** */
+
+.H100{
+    min-height: 100vh;
+    min-height: 100svh; /* Pour éviter que le responsive ne fonctionne pas correctement, détail professionnel, facultatif */
+
+    display: flex;
+    justify-content: center; /*Axe horizontal*/
+    align-items: center; /*Axe vertical*/
+}
+
+.bg-light{
+    background-color: rgb(250, 235, 215); 
+}
+
+.bg-dark{
+    background-color: rgb(82, 64, 41);
+}
+
+.block{
+    background-color: rgb(233, 252, 252);
+    width: 200px;
+    height: 200px;
+}
+
