@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPl
 
 /* Fonctions **********************************/
 
-/* Animation 1er block (ScrollTrigger) --------------*/
+/* Animation 1er section (ScrollTrigger) --------------*/
 
 gsap.to("#moving-block1", { // Va à ..., contrairement à "from" qui part de ...
     scrollTrigger : {
@@ -24,19 +24,85 @@ gsap.to("#moving-block1", { // Va à ..., contrairement à "from" qui part de ..
     duration : 2,
 })
 
-/* Animation 3e block (Timeline) ----------------*/
+
+/* Animation 2e section (Draggable) --------------*/
+
+let successCount = 0;
+const totalPairs = 3;
+
+Draggable.create(".draggable-block", {
+  type: "x,y",
+  edgeResistance: 0.65,
+  bounds: "#section2", // Limite le déplacement à la section
+  
+  onDragEnd: function() { // S'occupe des éléments lorsqu'on les lache quelque part
+    const draggedElem = this.target;
+    const targetKey = draggedElem.getAttribute("data-target");
+    const targetZone = document.querySelector(`.target-zone[data-target="${targetKey}"]`); // Sélectionne la zone de dépôt correspondante
+    
+    if (this.hitTest(targetZone, "50%")) { // Vérifie si la  carte touche la bonne zone cible (au moins 50% de chevauchement)
+      
+      const targetBounds = targetZone.getBoundingClientRect(); // Aligne parfaitement l'élément sur la zone cible
+      const dragBounds = draggedElem.getBoundingClientRect()
+      
+      const xOffset = targetBounds.left - dragBounds.left + this.x; // Calcule la différence de position pour replacer la carte correctement dans la zone
+      const yOffset = targetBounds.top - dragBounds.top + this.y;
+
+      gsap.to(draggedElem, {
+        x: xOffset,
+        y: yOffset,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+
+      this.disable(); // Désactive le drag sur ce bloc
+           
+      targetZone.classList.add("matched"); // Changement de couleur si l'association est correcte
+      gsap.to(draggedElem, { backgroundColor: "#22c55e", scale: 0.95 });
+
+      successCount++; // Compte la victoire
+      if (successCount === totalPairs) {
+        onGameComplete();
+      }
+
+    } else { // Si la cible est ratée ou mauvaise, retour à la position initiale  
+      gsap.to(draggedElem, {
+        x: 0,
+        y: 0,
+        duration: 0.5,
+        ease: "back.out(1.5)"
+      });
+    }
+  }
+});
+
+function onGameComplete() { // Animation de victoire globale
+  gsap.to(".game-section h2", {
+    scale: 1.2,
+    color: "#22c55e",
+    duration: 0.5,
+    yoyo: true,
+    repeat: 1
+  });
+}
+
+
+/* Animation 3e section (Timeline) ----------------*/
 
 let tl = gsap.timeline({
     repeat : -1,
     // yoyo : true, permet que l'animation se joue aussi dans le sens inverse infiniement
 })
 
-tl.to("#moving-block3", {x : "100px",})
-.to("#moving-block3", {y : "100px",})
-.to("#moving-block3", {x : "-20px",})
-.to("#moving-block3", {y : "-1px",})
+tl.to("#moving-block3", {x : "300px",})
+.to("#moving-block3", {y : "300px",})
+.to("#moving-block3", {x : "-50px",})
+.to("#moving-block3", {y : "-5px",})
 
-/* Animation 4e block (Draggable) ----------------*/
+tl.timeScale(0.5); // Ralenti le mouvement du block mouvant
+
+
+/* Animation 4e section (Draggable) ----------------*/
 
 Draggable.create("#moving-block4", {
     type : 'y', //objet uniquement draggable sur l'axe vertical

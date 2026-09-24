@@ -40,11 +40,138 @@
 }
 
 #moving-block1{
-    z-index: 0001; /* Mettre à l'arrière plan */
+    position: relative;
+    z-index: 1;
+    margin-bottom: -30px; /* Force le chevauchement avec la div suivante */
 }
 
 #text-block{
-    background-color: rgb(250, 235, 215);
+    background-color: transparent;
     width: 80vw;
+
+    position: relative;
+    z-index: 2; /* Chevauche la div précédente */
 }
+
+#section2{
+    display: flex;
+    flex-direction: column; /* Aligne les 2 grandes div en rang (1 à gauche 1 à droite) */
+    justify-content: flex-start; /* Aligne les éléments à gauche (pour éviter qu'ils soient condensés à droite) */
+    align-items: flex-start;
+    gap: 50px;
+    background-color: #4a3b2c; 
+    padding: 40px;
+    gap: 30px;
+    padding: 40px;
+}
+
+.drag{
+    display: flex;
+}
+
+.zone{
+    display: flex;
+    flex-direction: column; /* Empile les zones de dépot verticalement */
+    gap: 20px;
+}
+
+#h2-text{
+    color: rgb(250, 235, 215);
+}
+
+#zone-depot{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content; /* Largeur fixe (pour éviter que le texte s'écrase) */
+}
+
+#zone1, #zone2, #zone3{
+    margin: 30px;
+    width: 600px;
+    height: 200px;
+    border: 2px dashed rgb(148, 163, 184);
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row; /* Aligne le texte à gauche et le fond gris à droite */
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(100, 116, 139);
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#zone1, #zone2, #zone3, .description{
+    flex: 1; /* Prend tout l'espace disponible à gauche */
+    background-color: rgb(233, 252, 252); 
+    border-radius: 10px;
+    color: rgb(44, 44, 44);
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center; /* Centre le texte verticalement */
+}
+
+.target-zone {
+    width: 200px;
+    height: 100%;
+    background-color: rgba(233, 252, 252, 0.5); 
+    flex-shrink: 0; /* Empêche la zone de rétrécir */
+}
+
+#zone-depot, #cartes{
+    display: flex;
+    gap: 20px;
+}
+
+#cartes{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column; /* Empile les cartes verticalement */
+    gap: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#carte2, #carte3, #carte1{
+    margin: 30px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: grab;
+    user-select: none;
+    font-weight: bold;
+}
+
+.draggable-block{
+    background-color: rgb(233, 252, 252);
+    width: 200px;
+    height: 150px;
+
+    color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#zone-depot.matched{
+    border-style: solid;
+    border-color: rgb(34, 197, 94);
+    background-color: rgb(220, 252, 231);
+    color: rgb(21, 128, 61);
+}
+
+
 

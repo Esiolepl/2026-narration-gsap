@@ -14,14 +14,40 @@
         <div id="text-block" class="block">
             <h1 class="text">Le parfum et la mémoire</h1>
             <p class="text">Le lien entre parfum et mémoire trouve son origine dans l'anatomie de notre cerveau. Le système olfactif est connecté au système limbique, qui est responsable du traitement des émotions et de la mémoire. </p>
-            <p class="text">Lorsque nous sentons un parfum, les molécules odorantes stimulent les récepteurs olfactifs dans notre nez, lesquels envoient ensuite l’information au bulbe olfactif, situé dans la partie frontale de notre cerveau. De là, l'information est transmise à l'hippocampe et à l'amygdale, structures essentielles à la mémoire et aux émotions.</p>
+            <p class="text">Lorsque nous sentons un parfum, les molécules odorantes stimulent les récepteurs olfactifs dans notre nez, lesquels envoient ensuite l’information au bulbe olfactif, situé dans la partie frontale de notre cerveau. </p>
+            <p class="text">De là, l'information est transmise à l'hippocampe et à l'amygdale, structures essentielles à la mémoire et aux émotions.</p>
             <p class="text">C'est pourquoi une simple bouffée de parfum peut nous transporter instantanément dans le passé, ravivant des souvenirs que nous pensions oubliés.</p>
         </div>
      </section>
 
      <!-- Section 2 -------------------------------------->
      <section id="section2" class=" H100 bg-dark">
-        <div id="text-block" class="block"></div>
+
+        <h2 id="h2-text">A vous de jouer ! Associez les bonnes notes avec leur description !</h2>
+        <div class="drag">
+            <div id="zone-depot" class="zone"> 
+                <div id="zone1" class="block"> <!-- Zone 1 -->
+                    <div class="description"><p>Les premières odeurs perçues lorsqu'on applique le parfum. Elles sont souvent fraîches et légères, créant la première impression</p> </div>
+                    <div class="target-zone" id="target-tete" data-target="tete"></div> <!-- Zone de dépot grisée -->
+                </div>
+
+                <div id="zone2" class="block"> <!-- Zone 2 -->
+                    <div class="description"><p>Elles apparaissent après les notes de tête et constituent le corps principal du parfum. C'est ici que se développe la personnalité de la fragrance</p></div>
+                    <div class="target-zone" id="target-coeur" data-target="coeur"></div>
+                </div>
+
+                <div id="zone3" class="block"> <!-- Zone 3 -->
+                    <div class="description"><p>Les odeurs qui persistent le plus longtemps sur la peau. Elles apportent profondeur et durabilité au parfum.</p> </div>
+                    <div class="target-zone" id="target-fond" data-target="fond"></div>
+                </div>
+            </div>
+
+            <div id="cartes" class="block">
+                <div id="carte2" class="draggable-block" data-target="coeur"> <p>Note de cœur</p> </div>
+                <div id="carte3" class="draggable-block" data-target="fond"> <p>Note de fond</p> </div>
+                <div id="carte1" class="draggable-block" data-target="tete"> <p>Note de tête</p> </div>
+            </div>
+        </div>
      </section>
 
      <!-- Section 3 -------------------------------------->
@@ -30,8 +56,10 @@
         <div id="text-block" class="block">
             <h1 class="text">Le pouvoir évocateur des parfums</h1>
             <p class="text">Les parfums peuvent évoquer souvenirs et émotions intenses, notamment par la façon dont notre cerveau traite et stocke les informations olfactives.
-Contrairement aux autres sens, l'odorat est lié à la mémoire épisodique, laquelle concerne nos expériences de vie. Lorsque nous sentons un parfum pour la première fois, notre cerveau l'associe automatiquement au contexte émotionnel et aux circonstances dans lesquelles nous l'avons découvert.
-Par exemple, l'odeur de la bergamote peut rappeler le parfum d’une grand-mère, tandis que celle de la lavande peut évoquer des souvenirs de balades en Provence. Ces associations sont souvent durables et peuvent persister pendant de grandes périodes de temps, même si interagir trop souvent avec une odeur peut résulter à la désensibilisation à celle-ci, rendant l’identification et l’association à des souvenirs plus compliqué.</p>
+            <p class="text">Contrairement aux autres sens, l'odorat est lié à la mémoire épisodique, laquelle concerne nos expériences de vie.</p> 
+            <p class="text">Lorsque nous sentons un parfum pour la première fois, notre cerveau l'associe automatiquement au contexte émotionnel et aux circonstances dans lesquelles nous l'avons découvert.</p>
+            <p class="text">Par exemple, l'odeur de la bergamote peut rappeler le parfum d’une grand-mère, tandis que celle de la lavande peut évoquer des souvenirs de balades en Provence.</p> 
+            <p class="text">Ces associations sont souvent durables et peuvent persister pendant de grandes périodes de temps, même si interagir trop souvent avec une odeur peut résulter à la désensibilisation à celle-ci, rendant l’identification et l’association à des souvenirs plus compliqué.</p>
             
         </div>
      </section>
