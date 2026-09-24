@@ -66,7 +66,32 @@
 
      <!-- Section 4 -------------------------------------->
      <section id="section4" class=" H100 bg-dark">
-        <div id="text-block" class="block"></div>
+
+        <h2 id="h2-text">A vous de jouer ! Associez les bonnes notes avec leur description !</h2>
+        <div class="drag">
+            <div id="zone-depot" class="zone"> 
+                <div id="zone1" class="block"> <!-- Zone 1 -->
+                    <div class="description"><p>Connus pour leurs propriétés énergisantes et revigorantes, ils peuvent stimuler la production de sérotonine, l'hormone du bonheur</p> </div>
+                    <div class="target-zone" id="target-agrumes" data-target="agrumes"></div> <!-- Zone de dépot grisée -->
+                </div>
+
+                <div id="zone2" class="block"> <!-- Zone 2 -->
+                    <div class="description"><p>Ayant des effets apaisants et relaxants, ils favorisent la production de mélatonine, l'hormone du sommeil</p></div>
+                    <div class="target-zone" id="target-lavande" data-target="lavande"></div>
+                </div>
+
+                <div id="zone3" class="block"> <!-- Zone 3 -->
+                    <div class="description"><p>Souvent associés à des sentiments de romance et de bien-être, ils stimulent la production d'endorphines</p> </div>
+                    <div class="target-zone" id="target-jasmin" data-target="jasmin"></div>
+                </div>
+            </div>
+
+            <div id="cartes" class="block">
+                <div id="carte2" class="draggable-card" data-target="jasmin"> <p>Jasmin, rose</p> </div>
+                <div id="carte3" class="draggable-card" data-target="agrumes"> <p>Agrumes (citron, orange)</p> </div>
+                <div id="carte1" class="draggable-card" data-target="lavande"> <p>Lavande, camomille</p> </div>
+            </div>
+        </div>
      </section>
 
 

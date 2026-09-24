@@ -59,7 +59,7 @@
     justify-content: flex-start; /* Aligne les éléments à gauche (pour éviter qu'ils soient condensés à droite) */
     align-items: flex-start;
     gap: 50px;
-    background-color: #4a3b2c; 
+    background-color: rgb(74, 59, 44); 
     padding: 40px;
     gap: 30px;
     padding: 40px;
@@ -173,5 +173,32 @@
     color: rgb(21, 128, 61);
 }
 
+#section4{
+    display: flex;
+    flex-direction: column; /* Aligne les 2 grandes div en rang (1 à gauche 1 à droite) */
+    justify-content: flex-start; /* Aligne les éléments à gauche (pour éviter qu'ils soient condensés à droite) */
+    align-items: flex-start;
+    gap: 50px;
+    background-color: rgb(74, 59, 44); 
+    padding: 40px;
+    gap: 30px;
+    padding: 40px;
+}
+
+.draggable-card{
+    background-color: rgb(233, 252, 252);
+    width: 200px;
+    height: 150px;
+
+    color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 
