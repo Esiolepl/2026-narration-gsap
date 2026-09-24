@@ -26,23 +26,37 @@
 }
 
 .bg-light{
-    background-color: rgb(250, 235, 215); 
+    background-image: url("/2026-narration-gsap/assets/light-wallpaper.jpg");
+    background-repeat: no-repeat; /*Empêche la répétition de l'image (effet "mosaïque") */
+    background-size: cover; /*Couvre l'intégralité de la section*/
+    background-position: center; /*Centre l'image de la section*/
+    /*background-color: rgb(250, 235, 215);*/ 
 }
 
 .bg-dark{
-    background-color: rgb(82, 64, 41);
+    background-image: url("/2026-narration-gsap/assets/dark-wallapaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background-color: rgb(82, 64, 41);*/
 }
 
 .block{
-    background-color: rgb(233, 252, 252);
+    background-color: rgb(250, 235, 215);
     width: 150px;
     height: 150px;
 }
 
 #moving-block1{
+    background-color: transparent;
     position: relative;
     z-index: 1;
     margin-bottom: -30px; /* Force le chevauchement avec la div suivante */
+}
+
+.image{
+    height: 200px;
+    width: 200px;
 }
 
 #text-block{
@@ -106,7 +120,7 @@
 
 #zone1, #zone2, #zone3, .description{
     flex: 1; /* Prend tout l'espace disponible à gauche */
-    background-color: rgb(233, 252, 252); 
+    background-color: rgb(250, 235, 215); 
     border-radius: 10px;
     color: rgb(44, 44, 44);
     padding: 15px 20px;
@@ -151,7 +165,7 @@
 }
 
 .draggable-block{
-    background-color: rgb(233, 252, 252);
+    background-color: rgb(250, 235, 215);
     width: 200px;
     height: 150px;
 
@@ -173,6 +187,10 @@
     color: rgb(21, 128, 61);
 }
 
+#moving-block3{
+    background-color: transparent;
+}
+
 #section4{
     display: flex;
     flex-direction: column; /* Aligne les 2 grandes div en rang (1 à gauche 1 à droite) */
@@ -186,7 +204,7 @@
 }
 
 .draggable-card{
-    background-color: rgb(233, 252, 252);
+    background-color: rgb(250, 235, 215);
     width: 200px;
     height: 150px;
 
