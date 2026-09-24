@@ -1,10 +1,13 @@
+/* Sources : 
+Aide de Gemini pour la fonction des sections 2 et 4 (draggables)
+Documentation de gsap pour les animations
+Slides de JB Dacquet pour les animations
+*/
+
+
 /* Import *************************************/
 
 gsap.registerPlugin(ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin);
-
-
-/* Variables **********************************/
-
 
 /* Fonctions **********************************/
 
