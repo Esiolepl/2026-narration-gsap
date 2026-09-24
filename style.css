@@ -118,6 +118,8 @@
     transition: background-color 0.2s;
 }
 
+
+
 #zone1, #zone2, #zone3, .description{
     flex: 1; /* Prend tout l'espace disponible à gauche */
     background-color: rgb(250, 235, 215); 
@@ -219,4 +221,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.text, .description, .draggable-block, .draggable-card{
+    color: rgb(74, 59, 44);
+    font-size: large;
+}
 
+#h2-text, #h1-text{
+    font-size: xx-large ;
+}
